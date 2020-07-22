@@ -16,6 +16,9 @@ Creational
 1. Factory 
 2. Builder
 
+Structural
+1. Adapter
+
 ## Installation
 
 Anyone is more than free to install, use and modify these.

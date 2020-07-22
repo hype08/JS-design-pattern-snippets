@@ -80,5 +80,46 @@
 			"})();"
 		],
 		"description": "Builder that steps through assembly of instances"
+	},
+	"Translate one interface to another": {
+		"prefix": "adapter",
+		"body": [
+			"class $1 {",
+			"  constructor($3) {",
+			"    this.$3 = $3;",
+			"  }",
+			"",
+			"  $4() {",
+			"    return this.$3 * 1;",
+			"  }",
+			"}",
+			"",
+			"class $2 {",
+			"  constructor($3) {",
+			"    this.$3 = $3;",
+			"  }",
+			"",
+			"  $4With$5() {",
+			"    return this.$3 * 100;",
+			"  }",
+			"}",
+			"",
+			"class $2Adapter {",
+			"  constructor($6) {",
+			"    this.$6 = $6;",
+			"  }",
+			"",
+			"  $4() {",
+			"    return this.$6.$4With$5();",
+			"  }",
+			"}",
+			"",
+			"export {",
+			"  $1,",
+			"  $2,",
+			"  $2Adapter",
+			"};"
+		],
+		"description": "Translate one interface to another"
 	}
 }
