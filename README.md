@@ -15,6 +15,7 @@ WIP
 Creational
 1. Factory 
 2. Builder
+3. Singleton
 
 Structural
 1. Adapter
