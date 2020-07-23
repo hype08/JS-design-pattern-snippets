@@ -121,5 +121,23 @@
 			"};"
 		],
 		"description": "Translate one interface to another"
+	},
+	"The Singleton Pattern limits the number of instances of a particular object to just one.": {
+		"prefix": "singleton",
+		"body": [
+			"",
+			"class $1 {",
+			"  constructor() {",
+			"    if (typeof $1.instance === 'object') {",
+			"      return $1.instance;",
+			"    }",
+			"    $1.instance = this;",
+			"    return this;",
+			"  }",
+			"}",
+			"",
+			"export default $1;"
+		],
+		"description": "The Singleton Pattern limits the number of instances of a particular object to just one."
 	}
 }
